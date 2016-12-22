@@ -33,8 +33,9 @@ gulp.task('js', function() {
   gulp.src(jsDir)
     .pipe(minify({
         ext:{
-            min:'.min.js'
-        }
+          min:'.min.js'
+        },
+        noSource: true
     }))
     .pipe(gulp.dest(jsMinDir))
 });
